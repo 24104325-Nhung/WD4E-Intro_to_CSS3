@@ -1,48 +1,42 @@
-/* Đảm bảo toàn bộ trang có phông chữ dễ đọc */
+/* Phông chữ và nền chung */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #2c3e50;
-    color: #ffffff;
+    background-color: #121212; /* Nền tối hẳn */
+    color: #ffffff;            /* Chữ trắng rõ nét */
 }
 
-/* Thẻ main nằm trên nền trắng để độ tương phản cao nhất */
+/* Khối nội dung chính (main) */
 main {
-    background-color: #ffffff;
-    color: #111111;
+    background-color: #ffffff; /* Nền trắng */
+    color: #000000;            /* Chữ đen tuyền */
     padding: 20px;
     margin: 20px auto;
     max-width: 900px;
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
-/* Fix tương phản cho toàn bộ đường LINK trên nền trắng (trong main) */
+/* Sửa lỗi Contrast cho các thẻ link 'a' trong thanh Nav / Header / Footer */
+nav a, header a, footer a {
+    color: #ffffff !important;           /* Chữ trắng trên nền tối */
+    background-color: #000000 !important; /* Nền đen để tạo tương phản tuyệt đối */
+    padding: 6px 12px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+nav a:hover, header a:hover, footer a:hover {
+    color: #ffff00 !important; /* Màu vàng khi di chuột */
+}
+
+/* Sửa lỗi Contrast cho các link nằm trong phần nội dung trắng (main) */
 main a:link, main a:visited {
-    color: #0044cc !important;
+    color: #0000ee !important; /* Màu xanh chuẩn W3C có độ tương phản cao nhất trên nền trắng */
     text-decoration: underline !important;
     font-weight: bold;
 }
 
-main a:hover, main a:active {
-    color: #d9381e !important;
-}
-
-/* Fix tương phản cho toàn bộ đường LINK trên nền tối (Header, Nav, Footer) */
-header a, nav a, footer a {
-    color: #ffffff !important;
-    text-decoration: underline !important;
-}
-
-header a:link, nav a:link, footer a:link,
-header a:visited, nav a:visited, footer a:visited {
-    color: #ffffff !important;
-}
-
-header a:hover, nav a:hover, footer a:hover {
-    color: #f1c40f !important;
-}
-
-/* Căn chỉnh li theo yêu cầu đề bài */
+/* Căn chỉnh danh sách theo yêu cầu đề bài */
 li {
     display: inline-block;
     margin-right: 15px;
@@ -50,5 +44,5 @@ li {
 
 h1 {
     text-align: center;
-    color: #111111;
+    color: #000000;
 }
