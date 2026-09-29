@@ -1,44 +1,35 @@
-/* 3. Thẻ nội dung (body) - họ phông chữ và kích thước phông chữ */
-body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
+/* 1. Đổi màu tất cả thẻ link trong trang thành màu sáng nổi bật */
+a:link {
+    color: #00ffff !important; /* Màu xanh cyan sáng rõ trên nền tối */
+    text-decoration: underline;
 }
 
-/* 4. Thẻ tiêu đề (header) - màu nền */
-header {
-  background-color: #f4f4f4;
+a:visited {
+    color: #ffeb3b !important; /* Màu vàng sáng khi đã bấm vào */
 }
 
-/* 5. Thẻ nav - màu nền */
-nav {
-  background-color: #333333;
+a:hover, a:active {
+    color: #ffffff !important; /* Màu trắng khi di chuột vào */
 }
 
-/* 6. Thẻ chính (main) - màu nền và kích thước phông chữ */
-main {
-  background-color: #ffffff;
-  font-size: 18px;
+/* 2. Đảm bảo chữ trong thanh Header, Nav và Footer là màu trắng */
+header, nav, footer {
+    color: #ffffff !important;
 }
 
-/* 7. Thẻ chân trang (footer) - màu nền */
-footer {
-  background-color: #222222;
+header a, nav a, footer a {
+    color: #ffffff !important;
 }
 
-/* 8. Thẻ li - hiển thị và chiều rộng */
-li {
-  display: inline-block;
-  width: 120px;
+/* 3. Chữ trong phần nội dung chính (trên nền trắng/xám nhạt) dùng màu đen tuyền */
+main, main p, main h1 {
+    color: #000000 !important;
 }
 
-/* 9. Thẻ h1 - căn chỉnh văn bản, họ phông chữ và màu sắc */
-h1 {
-  text-align: center;
-  font-family: 'Helvetica Neue', sans-serif;
-  color: #1a73e8;
+main a:link {
+    color: #0056b3 !important; /* Màu xanh đậm đạt chuẩn tương phản trên nền trắng */
 }
 
-/* 10. Thẻ p - chiều cao dòng */
-p {
-  line-height: 1.6;
+main a:visited {
+    color: #4b0082 !important;
 }
